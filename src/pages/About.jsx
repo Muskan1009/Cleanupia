@@ -64,6 +64,31 @@ const About = () => {
           Our goal is to become the most trusted name in cleaning by delivering consistent, high-quality services and building lasting relationships with our clients.
         </p>
       </section>
+
+      <section className="py-16 px-5 sm:px-8 bg-white flex flex-col items-center justify-center text-center">
+
+        <h2 className="text-4xl font-bold text-gray-800">Our Team</h2>
+
+        <p className="md:w-1/2 mt-4 text-lg text-gray-600">
+          Our team of cleaning professionals is dedicated to providing exceptional service with a personal touch. We take pride in our work and treat every home or office as if it were our own.
+        </p>
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="">
+
+            <img src="https://randomuser.me/api/portraits" alt="Team Member" className="h-40 w-full object-cover rounded-full" />
+
+            <h3 className="mt-4 text-xl font-bold text-gray-800">John Doe</h3>
+
+            <p className="mt-2 text-gray-600">Cleaning Specialist</p>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </div>
   );
 };

@@ -52,7 +52,7 @@ const Home = () => {
     return (
         <div className="bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-yellow-50 px-5 md:px-10 lg:px-24 pt-24 mx-auto flex flex-col lg:flex-row items- justify-between overflow-hidden">
+            <section className="bg-yellow-50 px-5 md:px-10 lg:px-24 pt-24 mx-auto flex flex-col lg:flex-row items-center justify-between overflow-hidden">
 
                 <div className="w-auto h-full pb-24">
                     <h1 className="text-5xl font-bold text-green-700 leading-tight">
