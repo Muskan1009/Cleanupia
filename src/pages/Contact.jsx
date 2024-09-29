@@ -39,9 +39,10 @@ const Contact = () => {
 
             {/* Contact Information Section */}
             <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h2 className="text-4xl font-bold text-gray-800">Contact Information</h2>
-                    <p className="mt-4 text-lg text-gray-600">
+                <div className="max-w-7xl mx-auto px-4">
+
+                    <h2 className="text-4xl font-bold text-gray-800  text-center">Contact Information</h2>
+                    <p className="mt-4 text-lg text-gray-600  text-center">
                         Whether you’re looking to schedule a service, request a quote, or ask a question, our friendly team is here to help.
                     </p>
 
@@ -50,21 +51,21 @@ const Contact = () => {
                             <FaPhone className="text-4xl text-yellow-500 mr-4" />
                             <div>
                                 <h3 className="text-xl font-bold text-gray-800">Phone</h3>
-                                <p className="mt-1 text-gray-600">[Phone number]</p>
+                                <p className="mt-1 text-gray-600">888 581 9885</p>
                             </div>
                         </div>
                         <div className="flex items-center bg-yellow-100 p-6 rounded-lg shadow-lg">
                             <FaEnvelope className="text-4xl text-yellow-500 mr-4" />
                             <div>
                                 <h3 className="text-xl font-bold text-gray-800">Email</h3>
-                                <p className="mt-1 text-gray-600">[Email address]</p>
+                                <p className="mt-1 text-gray-600">info@cleanupia.com</p>
                             </div>
                         </div>
                         <div className="flex items-center bg-yellow-100 p-6 rounded-lg shadow-lg">
                             <FaMapMarkerAlt className="text-4xl text-yellow-500 mr-4" />
                             <div>
                                 <h3 className="text-xl font-bold text-gray-800">Address</h3>
-                                <p className="mt-1 text-gray-600">[Business address]</p>
+                                <p className="mt-1 text-gray-600">Five Greentree Centre, 525 Route 73N, Suite 104, Marlton, NJ 08053</p>
                             </div>
                         </div>
                     </div>
