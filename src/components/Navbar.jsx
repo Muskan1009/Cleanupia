@@ -3,6 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { CgMenuRightAlt } from "react-icons/cg";
 import Modal from '@mui/material/Modal';
 
+import { NavHashLink } from 'react-router-hash-link';
+
 function Navbar() {
 
   const [open, setOpen] = useState(false);
@@ -13,6 +15,7 @@ function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'About', path: '/about' },
+    { name: 'Blogs', path: '/blogs' },
     { name: 'Contact', path: '/contact' }
   ]
 
@@ -28,6 +31,9 @@ function Navbar() {
               </li>
             ))
           }
+          <li>
+            <NavHashLink to="/about#faq" className="text-gray-400 hover:text-green-700">FAQs</NavHashLink>
+          </li>
         </ul>
         <button className="hidden lg:block bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">Book a Service</button>
 

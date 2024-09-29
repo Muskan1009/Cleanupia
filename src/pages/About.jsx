@@ -3,6 +3,22 @@ import { FaThumbsUp, FaLeaf, FaLock } from 'react-icons/fa';
 import Aboutimg from '../assets/Serv.jpg'
 
 const About = () => {
+
+  const faqs = [
+    {
+        "question": "How do I schedule a cleaning service?",
+        "answer": "You can easily schedule a service through our online booking form or by giving us a call at -888 581 9885."
+    },
+    {
+        "question": "What types of cleaning products do you use?",
+        "answer": "We use eco-friendly, non-toxic cleaning products that are safe for your family, pets, and the environment."
+    },
+    {
+        "question": " Do I need to be home during the cleaning?",
+        "answer": "No, you don’t have to be home. Our team is fully insured and trustworthy, and you can provide instructions for access if needed."
+    }
+]
+
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
@@ -64,6 +80,25 @@ const About = () => {
           Our goal is to become the most trusted name in cleaning by delivering consistent, high-quality services and building lasting relationships with our clients.
         </p>
       </section>
+      <section id="faq" className='px-5 md:px-36 py-10 md:py-20 bg-gray-200 text-white font-semibold text-lg'>
+
+                <div className='flex flex-col items-center gap-2 pb-8'>
+                    <div className='font-bold text-4xl text-gray-900'>FAQs</div>
+                    <div className='text-xl text-center text-gray-800 mt-2'>Frequently Asked Questions</div>
+                </div>
+
+                {
+                    faqs.map((faq, index) => {
+                        return (
+                            <div key={index} className='flex flex-col gap-2'>
+                                <div className='md:px-14 py-2 font-semibold text-gray-800'>{index + 1}. {faq.question}</div>
+                                <div className='bg-white px-14 py-2 text-black font-normal rounded-lg'>{faq.answer}</div>
+                            </div>
+                        )
+                    })
+                }
+
+            </section>
     </div>
   );
 };

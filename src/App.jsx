@@ -7,22 +7,44 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+import Blog from './pages/Blog';
+import Read from './pages/Read';
+
+import ScrollReset from './components/ScrollReset';
+
 function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-           <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <>
+      <Router>
+
+        <ScrollReset />
+
+        <div className="flex flex-col min-h-screen">
+
+          <Navbar />
+
+          <main className="flex-grow">
+
+            <Routes>
+
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+
+              <Route path='/blogs' element={<Blog />} />
+              <Route path='/blogs/:blogID' element={<Read />} />
+
+            </Routes>
+
+          </main>
+
+          <Footer />
+
+        </div>
+
+      </Router>
+    </>
   );
 }
 

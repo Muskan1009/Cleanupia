@@ -6,6 +6,7 @@ import comm from '../assets/Comm.jpg'
 import Deep from '../assets/Deep.jpg'
 import Carpet from '../assets/carpet.jpg'
 import Moveclean from '../assets/Moveclean.jpg'
+import { useNavigate } from "react-router-dom";
 
 // Sample data for services
 const services = [
@@ -49,30 +50,35 @@ const testimonials = [
 ];
 
 const Home = () => {
+
+    const navigate = useNavigate()
+
     return (
+
         <div className="bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-yellow-50 px-5 md:px-10 lg:px-24 pt-24 mx-auto flex flex-col lg:flex-row items- justify-between overflow-hidden">
+            <section className="bg-yellow-50 px-5 md:px-10 lg:px-24 pt-24 pb-24 md:pb-0 mx-auto flex flex-col lg:flex-row justify-between overflow-hidden">
 
-                <div className="w-auto h-full pb-24">
-                    <h1 className="text-5xl font-bold text-green-700 leading-tight">
+                <div className="w-auto h-full my-auto flex flex-col gap-2 pb-0 md:pb-24">
+                    <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold text-green-700 leading-tight">
                         Professional Cleaning Service for Your Home
                     </h1>
-                    <p className="mt-4 text-lg text-gray-600">
+                    <p className="text-lg text-gray-600">
                         Reliable, friendly, and trustworthy cleaning services designed to meet your needs.
                     </p>
-                    <button className="mt-6 bg-orange-500 text-white px-8 py-3 rounded-md shadow-lg hover:bg-orange-600">
-                        Book a Service
-                    </button>
+                    <Link to='/about'><button className="mt-2 bg-orange-500 text-white px-8 py-3 rounded-md shadow-lg hover:bg-orange-600 w-max">
+                        Know More
+                    </button></Link>
                 </div>
-                
-                <img src={HeroImg} alt="" className='hidden md:block object-cover lg:w-[50%]' />
+
+                <img src={HeroImg} className='hidden md:block object-cover lg:w-[50%]' />
 
             </section>
 
             {/* Core Services Section */}
             <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-24 text-center">
+
+                <div className="mx-auto px-5 md:px-10 lg:px-24 text-center mb-10">
                     <h2 className="text-4xl font-bold text-gray-800">Our Core Services</h2>
                     <p className="mt-4 text-lg text-gray-600">
                         Discover how we can make your space cleaner, healthier, and more inviting.
@@ -91,40 +97,46 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+
+                    <button onClick={e=>navigate('/services')} className="mt-10 bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">
+                        Discover More
+                    </button>
+
+                </div>
+
+            </section>
+            <section className="bg-gray-100 py-16">
+                <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-24 text-center">
+                    <h2 className="text-4xl font-bold text-gray-800">What Our Clients Say</h2>
+                    <p className="mt-4 text-lg text-gray-600">Our customers love our service! See what they have to say:</p>
+
+                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="p-6 bg-white border rounded-lg shadow-lg">
+                            <p className="text-gray-600 italic">
+                                "Cleanupia's team did a fantastic job! My house has never looked cleaner. Highly recommended!"
+                            </p>
+                            <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
+                            <p className="mt-2 font-semibold text-gray-800">- Sarah K.</p>
+                        </div>
+
+                        <div className="p-6 bg-white border rounded-lg shadow-lg">
+                            <p className="text-gray-600 italic">
+                                "Professional and efficient. They made my move-out cleaning a breeze, saving me time and stress."
+                            </p>
+                            <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
+                            <p className="mt-2 font-semibold text-gray-800">- James T.</p>
+                        </div>
+
+                        <div className="p-6 bg-white border rounded-lg shadow-lg">
+                            <p className="text-gray-600 italic">
+                                "Our office has never looked better thanks to Cleanupia. We appreciate their attention to detail."
+                            </p>
+                            <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
+                            <p className="mt-2 font-semibold text-gray-800">- Office Manager, XYZ Co.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-24 text-center">
-          <h2 className="text-4xl font-bold text-gray-800">What Our Clients Say</h2>
-          <p className="mt-4 text-lg text-gray-600">Our customers love our service! See what they have to say:</p>
-          
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 bg-white border rounded-lg shadow-lg">
-              <p className="text-gray-600 italic">
-                "Cleanupia's team did a fantastic job! My house has never looked cleaner. Highly recommended!"
-              </p>
-              <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
-              <p className="mt-2 font-semibold text-gray-800">- Sarah K.</p>
-            </div>
-            
-            <div className="p-6 bg-white border rounded-lg shadow-lg">
-              <p className="text-gray-600 italic">
-                "Professional and efficient. They made my move-out cleaning a breeze, saving me time and stress."
-              </p>
-              <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
-              <p className="mt-2 font-semibold text-gray-800">- James T.</p>
-            </div>
-
-            <div className="p-6 bg-white border rounded-lg shadow-lg">
-              <p className="text-gray-600 italic">
-                "Our office has never looked better thanks to Cleanupia. We appreciate their attention to detail."
-              </p>
-              <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
-              <p className="mt-2 font-semibold text-gray-800">- Office Manager, XYZ Co.</p>
-            </div>
-          </div>
-        </div>
-      </section>
         </div>
     );
 };
