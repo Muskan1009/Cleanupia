@@ -7,6 +7,7 @@ import comm from '../assets/Comm.jpg'
 import Deep from '../assets/Deep.jpg'
 import Carpet from '../assets/carpet.jpg'
 import Moveclean from '../assets/Moveclean.jpg'
+import { useNavigate } from "react-router-dom";
 
 // Sample data for services
 const services = [
@@ -48,6 +49,9 @@ const services = [
 ];
 
 const Services = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
@@ -94,7 +98,7 @@ const Services = () => {
 
                 </div>
 
-                <button className="bg-white rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
+                <button onClick={e=>navigate('/cost-calculator')} className="bg-white rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
                   <p className="text-yellow-500 text-xl font-semibold">Book Now</p>
                   <service.icon size={25} className="text-yellow-500" />
                 </button>

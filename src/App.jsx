@@ -11,6 +11,7 @@ import Blog from './pages/Blog';
 import Read from './pages/Read';
 
 import ScrollReset from './components/ScrollReset';
+import CostCalculator from './pages/CostCalculator';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+
+              <Route path='/cost-calculator' element={<CostCalculator />} />
 
               <Route path='/blogs' element={<Blog />} />
               <Route path='/blogs/:blogID' element={<Read />} />

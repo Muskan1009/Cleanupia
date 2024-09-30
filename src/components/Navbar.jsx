@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { CgMenuRightAlt } from "react-icons/cg";
 import Modal from '@mui/material/Modal';
 
 import { NavHashLink } from 'react-router-hash-link';
 
 function Navbar() {
+
+  const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -35,7 +37,7 @@ function Navbar() {
             <NavHashLink to="/about#faq" className="text-gray-400 hover:text-green-700">FAQs</NavHashLink>
           </li>
         </ul>
-        <button className="hidden lg:block bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">Book a Service</button>
+        <button onClick={e=>navigate('/cost-calculator')} className="hidden lg:block bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">Calculate Cost</button>
 
         <div className='lg:hidden block'>
 
@@ -58,7 +60,7 @@ function Navbar() {
                   ))
                 }
               </ul>
-              <button className="bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600 mt-5">Book a Service</button>
+              <button onClick={e=>navigate('/cost-calculator')} className="bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600 mt-5">Calculate Cost</button>
             </div>
           </Modal>
 
