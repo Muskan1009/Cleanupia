@@ -57,7 +57,7 @@ const Home = () => {
 
         <div className="bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-yellow-50 px-5 md:px-10 lg:px-24 pt-24 pb-24 md:pb-0 mx-auto flex flex-col lg:flex-row justify-between overflow-hidden">
+            <section className="bg-yellow-50 px-5 md:px-10 lg:px-24 pt-24 pb-24 md:pb-0 mx-auto flex flex-col lg:flex-rowcenter justify-between overflow-hidden">
 
                 <div className="w-auto h-full my-auto flex flex-col gap-2 pb-0 md:pb-24">
                     <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold text-green-700 leading-tight">
