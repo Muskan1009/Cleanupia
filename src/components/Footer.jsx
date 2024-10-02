@@ -61,7 +61,7 @@ function Footer() {
                 {
                   legal.map((data, index) => (
                     <li key={index}>
-                      <a href={data.link} target="_blank" rel="noreferrer">{data.name}</a>
+                      <Link to={data.path}>{data.name}</Link>
                     </li>
                   ))
                 }
@@ -76,8 +76,8 @@ function Footer() {
           </div>
         </div>
       </footer>
-      <div className="text-center p-5 bg-white">
-        <p>© 2024 Cleanupia. All rights reserved.</p>
+      <div className="text-center text-xs p-5 bg-white">
+        <p>© 2024 Cleanupia LLC. All rights reserved</p>
       </div>
     </>
   );

@@ -7,6 +7,7 @@ import Deep from '../assets/Deep.jpg'
 import Carpet from '../assets/carpet.jpg'
 import Moveclean from '../assets/Moveclean.jpg'
 import { useNavigate } from "react-router-dom";
+import { Rating } from "@mui/material";
 
 // Sample data for services
 const services = [
@@ -35,17 +36,17 @@ const testimonials = [
     {
         name: "Sarah Johnson",
         review: "Cleanupia made my house feel like new again! Their deep cleaning service is top-notch.",
-        image: "sarah.jpg", // Replace with actual image paths
+        rating: 4,
     },
     {
         name: "David Lee",
         review: "We use Cleanupia for our office, and the team is always professional and thorough.",
-        image: "david.jpg",
+        rating: 5,
     },
     {
         name: "Emily Martinez",
         review: "The move-out cleaning service saved us so much time! Highly recommend.",
-        image: "emily.jpg",
+        rating: 4.5,
     },
 ];
 
@@ -98,7 +99,7 @@ const Home = () => {
                         ))}
                     </div>
 
-                    <button onClick={e=>navigate('/services')} className="mt-10 bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">
+                    <button onClick={e => navigate('/services')} className="mt-10 bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">
                         Discover More
                     </button>
 
@@ -111,29 +112,24 @@ const Home = () => {
                     <p className="mt-4 text-lg text-gray-600">Our customers love our service! See what they have to say:</p>
 
                     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="p-6 bg-white border rounded-lg shadow-lg">
-                            <p className="text-gray-600 italic">
-                                "Cleanupia's team did a fantastic job! My house has never looked cleaner. Highly recommended!"
-                            </p>
-                            <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
-                            <p className="mt-2 font-semibold text-gray-800">- Sarah K.</p>
-                        </div>
 
-                        <div className="p-6 bg-white border rounded-lg shadow-lg">
-                            <p className="text-gray-600 italic">
-                                "Professional and efficient. They made my move-out cleaning a breeze, saving me time and stress."
-                            </p>
-                            <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
-                            <p className="mt-2 font-semibold text-gray-800">- James T.</p>
-                        </div>
+                        {
+                            testimonials.map((data, i) => {
+                                return (
+                                    <div className="p-6 bg-white border rounded-lg shadow-lg flex flex-col items-center justify-between gap-2">
+                                        <p className="text-gray-600 italic">
+                                            "{data.review}"
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <Rating name="read-only" value={data.rating} precision={0.5} readOnly />
+                                            <p className="mt-2 font-semibold text-gray-800">{data.name}</p>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
 
-                        <div className="p-6 bg-white border rounded-lg shadow-lg">
-                            <p className="text-gray-600 italic">
-                                "Our office has never looked better thanks to Cleanupia. We appreciate their attention to detail."
-                            </p>
-                            <div className="mt-4 text-yellow-500 text-2xl font-bold">🌟🌟🌟🌟🌟</div>
-                            <p className="mt-2 font-semibold text-gray-800">- Office Manager, XYZ Co.</p>
-                        </div>
+
                     </div>
                 </div>
             </section>

@@ -78,47 +78,54 @@ const Contact = () => {
                     <h2 className="text-4xl font-bold text-gray-800">Contact Us</h2>
                     <p className="mt-4 text-lg text-gray-600">Fill out the form below, and we’ll get back to you within 24 hours.</p>
 
-                    <form onSubmit={handleSubmit} className="mt-12 max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-                        <div className="mb-4">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Your Name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Your Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <textarea
-                                name="message"
-                                placeholder="Your Message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                                className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                rows="4"
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-full font-semibold"
-                        >
-                            Send Message
-                        </button>
-                    </form>
+                    <div className="flex flex-col gap-5 lg:flex-row mt-12 max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+
+                        <form onSubmit={handleSubmit} className="w-full lg:w-1/2">
+                            <div className="mb-4">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 duration-300"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Your Email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 duration-300"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <textarea
+                                    name="message"
+                                    placeholder="Your Message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 duration-300"
+                                    rows="4"
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-lg font-semibold w-full"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6121.525430369327!2d-74.94141668034702!3d39.90194459536868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c133acab4c0123%3A0x1f3820d10645386f!2sFive%20Greentree%20Center!5e0!3m2!1sen!2sin!4v1727892984580!5m2!1sen!2sin" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='xl:w-[50%] rounded-lg'></iframe>
+
+                    </div>
+
                 </div>
             </section>
 

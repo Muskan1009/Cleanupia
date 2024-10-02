@@ -100,7 +100,7 @@ const Services = () => {
 
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="p-5 flex flex-col border rounded-lg bg-yellow-100 shadow-lg transition duration-300 transform hover:scale-105 justify-between">
+              <div key={index} className="p-5 flex flex-col border rounded-lg bg-slate-100 hover:shadow-lg transition duration-300 transform justify-between">
 
                 <div className="flex flex-col">
 
@@ -109,14 +109,14 @@ const Services = () => {
                     alt={service.title}
                     className="h-40 w-full object-cover rounded-t-lg"
                   />
-                  <h3 className="mt-4 text-2xl font-bold text-gray-800">{service.title}</h3>
-                  <p className="mt-2 text-sm text-gray-600">{service.description}</p>
+                  <h3 className="mt-4 text-2xl font-bold text-gray-800 text-left">{service.title}</h3>
+                  <p className="mt-2 text-sm text-gray-600 text-left">{service.description}</p>
 
                 </div>
 
-                <button onClick={e => navigate('/cost-calculator')} className="bg-white rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
-                  <p className="text-yellow-500 text-xl font-semibold">Book Now</p>
-                  <service.icon size={25} className="text-yellow-500" />
+                <button onClick={e => navigate('/cost-calculator')} className="bg-slate-300 hover:bg-yellow-500 hover:text-white duration-300 rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
+                  <p className="text-xl font-semibold">Book Now</p>
+                  {/* <service.icon size={25} className="text-yellow-500" /> */}
                 </button>
               </div>
             ))}

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaThumbsUp, FaLeaf, FaLock } from 'react-icons/fa';
 import Aboutimg from '../assets/Serv.jpg'
+import Founder from '../assets/founder.jpg'
 
 const About = () => {
 
@@ -56,7 +57,7 @@ const About = () => {
         <h2 className="text-4xl font-bold text-gray-800">Our Story</h2>
 
         <p className="md:w-1/2 mt-4 text-lg text-gray-600">
-          Founded in [year], Cleanupia has grown from a small local business into a leading provider of cleaning services across the region. Our success is rooted in our attention to detail, use of eco-friendly products, and a customer-first approach. We believe in making cleaning easy and affordable for everyone.
+          Founded in 2024, Cleanupia has grown from a small local business into a leading provider of cleaning services across the region. Our success is rooted in our attention to detail, use of eco-friendly products, and a customer-first approach. We believe in making cleaning easy and affordable for everyone.
         </p>
 
         {/* Our Values Section */}
@@ -122,20 +123,19 @@ const About = () => {
           <div className='font-bold text-4xl text-gray-900'>Meet Our Team</div>
         </div>
 
-        <figure class="md:flex bg-green-700 rounded-xl p-8 md:p-0 items-center mx-auto xl:w-1/2">
-          <img class="w-44 h-44 rounded-full mx-auto bg-white md:ml-8" src="/sarah-dayan.jpg" alt="" />
+        <figure class="md:flex bg-slate-200 text-black rounded-xl p-8 items-center mx-auto w-max">
+          <img class="w-44 h-44 rounded-full mx-auto bg-white md:ml-8 object-contain" src={Founder} alt="" />
           <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-            <blockquote>
-              <p class="text-lg font-medium">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quidem ratione sed quasi, obcaecati voluptatem molestias architecto dignissimos saepe a nobis ipsum alias facilis vitae, nostrum labore delectus exercitationem asperiores?
-              </p>
-            </blockquote>
+
+            {/* <p class="text-lg font-medium">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quidem ratione sed quasi, obcaecati voluptatem molestias architecto dignissimos saepe a nobis ipsum alias facilis vitae, nostrum labore delectus exercitationem asperiores?
+            </p> */}
             <figcaption class="font-medium">
               <div class="">
-                Member Name
+                Lyonel
               </div>
               <div class="">
-                Designation
+                CEO, Founder
               </div>
             </figcaption>
           </div>
