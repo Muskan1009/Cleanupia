@@ -22,27 +22,27 @@ function Navbar() {
   ]
 
   return (
-    <header className="bg-slate-200 px-5 md:px-10 lg:px-24 py-4 shadow-lg">
+    <header className="bg-green-700 px-5 md:px-10 lg:px-24 py-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         {/* <div className="text-2xl font-bold text-green-700">Cleanupia</div> */}
         <ul className="hidden lg:flex space-x-8 text-lg font-medium">
           {
             links.map((link, index) => (
               <li key={index}>
-                <NavLink to={link.path} className={({ isActive }) => isActive ? "text-green-900 duration-300 " : " duration-300 text-gray-400 hover:text-green-700"}>{link.name}</NavLink>
+                <NavLink to={link.path} className={({ isActive }) => isActive ? "text-white duration-300 " : " duration-300 text-white/50 hover:text-white"}>{link.name}</NavLink>
               </li>
             ))
           }
           <li>
-            <NavHashLink to="/about#faq" className="text-gray-400 hover:text-green-700">FAQs</NavHashLink>
+            <NavHashLink to="/about#faq" className="duration-300 text-white/50 hover:text-white">FAQs</NavHashLink>
           </li>
         </ul>
-        <button onClick={e=>navigate('/cost-calculator')} className="hidden lg:block bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">Calculate Cost</button>
+        <button onClick={e => navigate('/cost-calculator')} className="hidden lg:block bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600">Calculate Cost</button>
 
         <div className='lg:hidden block'>
 
           <button onClick={handleOpen}>
-            <CgMenuRightAlt size={40} className='text-green-900' />
+            <CgMenuRightAlt size={40} className='text-white' />
           </button>
 
           <Modal
@@ -60,7 +60,7 @@ function Navbar() {
                   ))
                 }
               </ul>
-              <button onClick={e=>navigate('/cost-calculator')} className="bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600 mt-5">Calculate Cost</button>
+              <button onClick={e => navigate('/cost-calculator')} className="bg-orange-500 text-white py-2 px-6 rounded-md shadow-lg hover:bg-orange-600 mt-5">Calculate Cost</button>
             </div>
           </Modal>
 
