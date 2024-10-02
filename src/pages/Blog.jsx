@@ -33,7 +33,7 @@ const Blog = () => {
     }
 
     return (
-        <section className="px-5 md:px-10 lg:px-24 py-4 bg-white flex flex-col items-center">
+        <section className="px-5 md:px-10 lg:px-24 py-5 lg:py-10 bg-white flex flex-col items-center">
 
             <h2 className="text-4xl font-bold text-gray-800 text-center">Our Blogs</h2>
             <p className="md:w-1/2 mt-4 text-lg text-gray-600 text-center">

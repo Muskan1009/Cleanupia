@@ -12,6 +12,9 @@ import Read from './pages/Read';
 
 import ScrollReset from './components/ScrollReset';
 import CostCalculator from './pages/CostCalculator';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import PageTop from './components/PageTop';
 
 function App() {
   return (
@@ -21,6 +24,8 @@ function App() {
         <ScrollReset />
 
         <div className="flex flex-col min-h-screen">
+
+          <PageTop />
 
           <Navbar />
 
@@ -37,6 +42,9 @@ function App() {
 
               <Route path='/blogs' element={<Blog />} />
               <Route path='/blogs/:blogID' element={<Read />} />
+
+              <Route path='/privacy' element={<Privacy />} />
+              <Route path='/terms' element={<Terms />} />
 
             </Routes>
 

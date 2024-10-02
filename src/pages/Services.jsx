@@ -7,45 +7,61 @@ import comm from '../assets/Comm.jpg'
 import Deep from '../assets/Deep.jpg'
 import Carpet from '../assets/carpet.jpg'
 import Moveclean from '../assets/Moveclean.jpg'
+import Deep2 from '../assets/deep2.jpg'
+import Upholstry from '../assets/upholstry.jpg'
 import { useNavigate } from "react-router-dom";
 
 // Sample data for services
 const services = [
   {
-    title: "Residential Cleaning ",
+    title: "House Cleaning Services",
     description:
-      "Let us take care of the mess so you can enjoy a clean and comfortable home. Our residential cleaning services include dusting, vacuuming, mopping, and detailed bathroom and kitchen cleaning. Whether you need regular cleaning or a one-time deep clean, we have a solution for you.",
+      "Whether you need a regular cleaning schedule or a deep cleaning of your home, our team delivers professional and thorough cleaning solutions to keep your space looking pristine.",
     icon: FaHome,
     image: resident, // Replace with actual image paths
   },
   {
-    title: "Commercial Cleaning ",
+    title: "Office Cleaning Services",
     description:
-      "A clean and organized workspace boosts productivity and creates a welcoming atmosphere. Our commercial cleaning services are designed for offices, retail spaces, and other business environments, offering flexible scheduling to minimize disruption.",
+      "A clean office promotes productivity and professionalism. We offer customized office cleaning services to keep your workspace neat, organized, and hygienic.",
     icon: FaBuilding,
-    image: comm,
+    image: comm, // Replace with actual image paths
   },
   {
-    title: "Deep Cleaning ",
+    title: "Airbnb Cleaning",
     description:
-      "Our deep cleaning services go beyond surface-level cleaning, targeting hard-to-reach areas and eliminating built-up grime. Perfect for a seasonal refresh, after renovation, or any time your space needs a thorough top-to-bottom clean.",
+      "Make sure your Airbnb property is guest-ready with our specialized cleaning services. We offer fast turnaround times and high-quality cleaning to ensure your guests have an excellent stay.",
     icon: FaBroom,
-    image: Deep,
+    image: Deep, // Replace with actual image paths
   },
   {
-    title: "Carpet & Upholstery Cleaning ",
+    title: "Deep Cleaning Specialists",
     description:
-      "Revive your carpets and upholstery with our professional cleaning services. We use industry-grade equipment to remove tough stains, dirt, and allergens, extending the life of your fabrics and improving indoor air quality.",
+      "For those hard-to-reach places and extra-dirty spaces, our deep cleaning services go beyond regular cleaning to ensure a complete and thorough clean.",
     icon: FaCouch,
-    image: Carpet,
+    image: Deep2, // Replace with actual image paths
   },
   {
-    title: "Move-In/Move-Out Cleaning ",
+    title: "Carpet Cleaning",
     description:
-      "Moving can be overwhelming, but Cleanupia is here to help! Our move-in/move-out cleaning services ensure your new or former home is spotless and ready for the next chapter. We’ll handle everything from deep-cleaning kitchens and bathrooms to wiping down baseboards and floors.",
+      "Keep your carpets fresh and stain-free with our professional carpet cleaning services. We use specialized equipment to remove dirt, allergens, and stains.",
     icon: FaTruckMoving,
-    image: Moveclean,
+    image: Carpet, // Replace with actual image paths
   },
+  {
+    title: "Upholstery Cleaning",
+    description:
+      "Refresh your furniture and extend its lifespan with our expert upholstery cleaning services. We use safe, non-toxic cleaning solutions to remove stains, dirt, and odors.",
+    icon: FaTruckMoving,
+    image: Upholstry, // Replace with actual image paths
+  },
+  {
+    title: "Move-Out Cleaning",
+    description:
+      "Leave your old property spotless with our move-out cleaning services. Ideal for tenants looking to get their deposit back or homeowners preparing for sale.",
+    icon: FaTruckMoving,
+    image: Moveclean, // Replace with actual image paths
+  }
 ];
 
 const Services = () => {
@@ -98,7 +114,7 @@ const Services = () => {
 
                 </div>
 
-                <button onClick={e=>navigate('/cost-calculator')} className="bg-white rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
+                <button onClick={e => navigate('/cost-calculator')} className="bg-white rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
                   <p className="text-yellow-500 text-xl font-semibold">Book Now</p>
                   <service.icon size={25} className="text-yellow-500" />
                 </button>

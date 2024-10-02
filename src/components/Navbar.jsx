@@ -22,9 +22,9 @@ function Navbar() {
   ]
 
   return (
-    <header className="bg-white px-5 md:px-10 lg:px-24 py-4 shadow-lg">
+    <header className="bg-slate-200 px-5 md:px-10 lg:px-24 py-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-green-700">Cleanupia</div>
+        {/* <div className="text-2xl font-bold text-green-700">Cleanupia</div> */}
         <ul className="hidden lg:flex space-x-8 text-lg font-medium">
           {
             links.map((link, index) => (

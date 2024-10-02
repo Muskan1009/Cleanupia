@@ -7,7 +7,10 @@ function Footer() {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blogs', path: '/blogs' },
+    { name: 'Privacy', path: '/privacy' },
+    { name: 'Terms', path: '/terms' }
   ]
 
   const socials = [

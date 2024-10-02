@@ -6,18 +6,26 @@ const About = () => {
 
   const faqs = [
     {
-      "question": "How do I schedule a cleaning service?",
-      "answer": "You can easily schedule a service through our online booking form or by giving us a call at -888 581 9885."
+      question: "What types of cleaning services do you offer?",
+      answer: "We offer a variety of services including house cleaning, office cleaning, Airbnb cleaning, deep cleaning, carpet cleaning, upholstery cleaning, and move-out cleaning."
     },
     {
-      "question": "What types of cleaning products do you use?",
-      "answer": "We use eco-friendly, non-toxic cleaning products that are safe for your family, pets, and the environment."
+      question: "Do you provide cleaning supplies and equipment?",
+      answer: "Yes, we provide all the necessary cleaning supplies and equipment. However, if you have specific preferences for products, we are happy to accommodate them."
     },
     {
-      "question": " Do I need to be home during the cleaning?",
-      "answer": "No, you don’t have to be home. Our team is fully insured and trustworthy, and you can provide instructions for access if needed."
+      question: "Are your cleaning products eco-friendly?",
+      answer: "Yes, we prioritize the use of eco-friendly and non-toxic cleaning products to ensure the safety of our clients, their families, and the environment."
+    },
+    {
+      question: "How do I book a cleaning service?",
+      answer: "You can schedule a cleaning service by calling us at 888-581-9885, emailing us at info@cleanupia.com, or using our online booking form on our website."
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer: "We require a 24-hour notice for any cancellations or rescheduling of services."
     }
-  ]
+  ];
 
   return (
     <div className="bg-gray-50">
@@ -30,15 +38,23 @@ const About = () => {
         />
         <div className="relative z-10 px-5 flex flex-col items-center">
           <h1 className="text-2xl md:text-5xl xl:text-6xl font-bold">Committed to Clean. Dedicated to You.</h1>
-          <p className="md:w-1/2 mt-4 text-center md:text-xl">
-            At Cleanupia, we’re more than just a cleaning company. We’re a team of dedicated professionals committed to providing high-quality, reliable cleaning services for homes and businesses.
+          <p className="md:w-[60%] mt-4 text-center md:text-xl">
+
+            At <strong>Cleanupia</strong>, we believe that a clean environment contributes to a healthy and productive lifestyle. Based in Marlton, New Jersey, we specialize in providing premium cleaning services to homes, offices, and Airbnb properties. Whether you need a one-time deep cleaning, regular maintenance, or specialized services such as upholstery cleaning, our professional team is dedicated to ensuring your space is spotless and welcoming.
+
+            With years of experience in the cleaning industry, we understand the importance of attention to detail, reliability, and customer satisfaction. Our services are designed to meet your specific needs, using eco-friendly products that are safe for you, your family, and your pets.
+
+            From move-out cleaning to carpet and upholstery care, Cleanupia is here to deliver top-notch results every time.
+
           </p>
         </div>
       </section>
 
       {/* About Section */}
       <section className="py-16 px-5 sm:px-8 bg-white flex flex-col items-center justify-center text-center">
+
         <h2 className="text-4xl font-bold text-gray-800">Our Story</h2>
+
         <p className="md:w-1/2 mt-4 text-lg text-gray-600">
           Founded in [year], Cleanupia has grown from a small local business into a leading provider of cleaning services across the region. Our success is rooted in our attention to detail, use of eco-friendly products, and a customer-first approach. We believe in making cleaning easy and affordable for everyone.
         </p>
