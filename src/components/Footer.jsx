@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 function Footer() {
 
@@ -15,6 +16,8 @@ function Footer() {
     { name: 'Facebook', link: 'https://www.facebook.com/profile.php?id=61566593729784' },
     { name: 'Instagram', link: 'https://www.instagram.com/cleanupiallc/' },
     { name: 'Linkedin', link: 'https://www.linkedin.com/in/cleanupia-llc-4414aa330/' },
+    { name: 'Twitter', link: 'https://x.com/cleanupia71116' },
+    { name: 'Tiktok', link: 'https://www.linkedin.com/in/cleanupia-llc-4414aa330/' },
   ]
 
   const legal = [
@@ -41,6 +44,7 @@ function Footer() {
                     <li key={index}><Link to={link.path} className="hover:underline">{link.name}</Link></li>
                   ))
                 }
+                <NavHashLink to="/about#faq" className="hover:underline">FAQs</NavHashLink>
               </ul>
             </div>
             <div>

@@ -58,6 +58,9 @@ function Navbar() {
                     </li>
                   ))
                 }
+                <li>
+                  <NavHashLink to="/about#faq" className="text-green-900 duration-300 ">FAQs</NavHashLink>
+                </li>
               </ul>
             </div>
           </Modal>
