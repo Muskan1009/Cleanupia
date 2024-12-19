@@ -4,6 +4,7 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import Modal from '@mui/material/Modal';
 
 import { NavHashLink } from 'react-router-hash-link';
+import { BookingUrl } from '../services/Helpers';
 
 function Navbar() {
 
@@ -17,13 +18,13 @@ function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'About', path: '/about' },
-    { name: 'Blogs', path: '/blogs' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blogs', path: '/blogs' }
   ]
 
   return (
     <header className="bg-green-700 px-5 md:px-10 lg:px-24 py-3 lg:py-8 shadow-lg">
-      <div className="container mx-auto flex lg:justify-center items-center">
+      <div className="container mx-auto flex justify-between items-center">
         {/* <div className="text-2xl font-bold text-green-700">Cleanupia</div> */}
         <ul className="hidden lg:flex space-x-8 text-lg font-medium">
           {
@@ -49,7 +50,7 @@ function Navbar() {
             onClose={handleClose}
             className="flex justify-center items-center"
           >
-            <div className='p-10 bg-white rounded-2xl'>
+            <div className='p-10 bg-white rounded-2xl w-[90%] md:w-1/2 '>
               <ul className="flex flex-col space-y-4 text-lg font-medium">
                 {
                   links.map((link, index) => (
@@ -59,13 +60,17 @@ function Navbar() {
                   ))
                 }
                 <li>
-                  <NavHashLink to="/about#faq" className="text-green-900 duration-300 ">FAQs</NavHashLink>
+                  <NavHashLink to="/about#faq" className={({ isActive }) => isActive ? "text-green-900 duration-300 " : " duration-300 text-gray-400 hover:text-green-700"}>FAQs</NavHashLink>
                 </li>
               </ul>
             </div>
           </Modal>
 
         </div>
+
+        <a href={BookingUrl} target='_blank' className='text-black font-medium bg-white rounded-lg py-2 px-5'>
+          Book Now
+        </a>
 
       </div>
     </header>

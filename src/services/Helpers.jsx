@@ -1,0 +1,2 @@
+export const BookingUrl = 'https://clienthub.getjobber.com/booking/caf32c67-11a1-4b49-ae9b-97c8bb1c6e89';
+export const ContactUrl = 'https://clienthub.getjobber.com/client_hubs/912397cc-74cc-4b64-9ec9-b3b791d446d8/public/work_request/new';

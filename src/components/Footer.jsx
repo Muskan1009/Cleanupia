@@ -75,8 +75,12 @@ function Footer() {
 
           <div>
             <h3 className="text-lg font-bold">Contact Us</h3>
-            <p className="mt-2">Email: info@cleanupia.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
+            <p className="mt-2">Email: contact@cleanupia.com</p>
+            <p>Phone: 1-888-581-9885</p>
+
+            <p className='mt-3'>
+              We are listed in b2blistings.org's <a className='underline underline-offset-2' href="https://www.b2blistings.org/Cleaning-Services/C44-1-0.htm">Cleaning Services Directory</a>
+            </p>
           </div>
         </div>
       </footer>

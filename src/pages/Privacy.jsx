@@ -31,7 +31,7 @@ const Privacy = () => {
             <h2 className="text-2xl font-semibold mb-4">Contact Us:</h2>
             <ul className="mb-6">
                 <li>Phone: <a href="tel:+18885819885" className="text-blue-600 hover:underline">888-581-9885</a></li>
-                <li>Email: <a href="mailto:info@cleanupia.com" className="text-blue-600 hover:underline">info@cleanupia.com</a></li>
+                <li>Email: <a href="mailto:contact@cleanupia.com" className="text-blue-600 hover:underline">contact@cleanupia.com</a></li>
                 <li>Address: Five Greentree Centre, 525 Route 73N, Suite 104, Marlton, NJ 08053</li>
             </ul>
         </div>

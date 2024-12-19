@@ -10,6 +10,7 @@ import Moveclean from '../assets/Moveclean.jpg'
 import Deep2 from '../assets/deep2.jpg'
 import Upholstry from '../assets/upholstry.jpg'
 import { useNavigate } from "react-router-dom";
+import { BookingUrl } from "../services/Helpers";
 
 // Sample data for services
 const services = [
@@ -114,10 +115,10 @@ const Services = () => {
 
                 </div>
 
-                <button onClick={e => navigate('/cost-calculator')} className="bg-slate-300 hover:bg-yellow-500 hover:text-white duration-300 rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
+                <a href={BookingUrl} target="_blank" className="bg-slate-300 hover:bg-yellow-500 hover:text-white duration-300 rounded-lg w-full flex gap-5 justify-center items-center py-2 mt-5">
                   <p className="text-xl font-semibold">Book Now</p>
                   {/* <service.icon size={25} className="text-yellow-500" /> */}
-                </button>
+                </a>
               </div>
             ))}
           </div>

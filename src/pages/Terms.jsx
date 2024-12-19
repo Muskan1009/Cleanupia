@@ -21,6 +21,12 @@ const Terms = () => {
                 Cleanupia is not liable for indirect, incidental, or consequential damages arising from the use of our services.
             </p>
 
+            <h2 className="text-2xl font-semibold mb-4">Cancelation Policy</h2>
+
+            <p className="mb-6">
+                There is a $100 to $150 Cancelation Fee for bookings already confirmed by the client. Fee is paid upon cancellation. $150 for Deep Cleanings, Move in/Out. $100 for Regular Cleanings.
+            </p>
+
             <p>
                 For more details, please review our full Terms of Use page.
             </p>

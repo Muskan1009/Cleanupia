@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import Aboutimg from '../assets/Serv.jpg'
+import Disclaimer from "../components/Disclaimer";
+import { ContactUrl } from "../services/Helpers";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -51,14 +53,14 @@ const Contact = () => {
                             <FaPhone className="text-4xl text-yellow-500 mr-4" />
                             <div>
                                 <h3 className="text-xl font-bold text-gray-800">Phone</h3>
-                                <p className="mt-1 text-gray-600">888 581 9885</p>
+                                <p className="mt-1 text-gray-600">1-888-581-9885</p>
                             </div>
                         </div>
                         <div className="flex items-center bg-yellow-100 p-6 rounded-lg shadow-lg">
                             <FaEnvelope className="text-4xl text-yellow-500 mr-4" />
                             <div>
                                 <h3 className="text-xl font-bold text-gray-800">Email</h3>
-                                <p className="mt-1 text-gray-600">info@cleanupia.com</p>
+                                <p className="mt-1 text-gray-600">contact@cleanupia.com</p>
                             </div>
                         </div>
                         <div className="flex items-center bg-yellow-100 p-6 rounded-lg shadow-lg">
@@ -80,7 +82,24 @@ const Contact = () => {
 
                     <div className="flex flex-col gap-5 lg:flex-row mt-12 max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
 
-                        <form onSubmit={handleSubmit} className="w-full lg:w-1/2">
+                        <div className="w-full lg:w-1/2 flex flex-col gap-3 h-[50vh] text-left">
+
+                            <p>
+                                Fill out the form below, and we’ll get back to you within 24 hours. We look forward to hearing from you!
+                            </p>
+
+                            <Disclaimer />
+                            <a
+                                target="_blank"
+                                href={ContactUrl}
+                                className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-lg text-center font-semibold w-full mt-4"
+                            >
+                                Contact Us Now
+                            </a>
+
+                        </div>
+
+                        {/* <form onSubmit={handleSubmit} className="w-full lg:w-1/2">
                             <div className="mb-4">
                                 <input
                                     type="text"
@@ -104,6 +123,15 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="mb-4">
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    placeholder="Your Phone"
+                                    required
+                                    className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 duration-300"
+                                />
+                            </div>
+                            <div className="mb-4">
                                 <textarea
                                     name="message"
                                     placeholder="Your Message"
@@ -114,15 +142,16 @@ const Contact = () => {
                                     rows="4"
                                 />
                             </div>
+                            <Disclaimer />
                             <button
                                 type="submit"
-                                className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-lg font-semibold w-full"
+                                className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-lg font-semibold w-full mt-4"
                             >
                                 Send Message
                             </button>
-                        </form>
+                        </form> */}
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6121.525430369327!2d-74.94141668034702!3d39.90194459536868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c133acab4c0123%3A0x1f3820d10645386f!2sFive%20Greentree%20Center!5e0!3m2!1sen!2sin!4v1727892984580!5m2!1sen!2sin" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='xl:w-[50%] rounded-lg'></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6121.525430369327!2d-74.94141668034702!3d39.90194459536868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c133acab4c0123%3A0x1f3820d10645386f!2sFive%20Greentree%20Center!5e0!3m2!1sen!2sin!4v1727892984580!5m2!1sen!2sin" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='lg:w-[50%] rounded-lg'></iframe>
 
                     </div>
 

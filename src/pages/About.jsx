@@ -20,7 +20,7 @@ const About = () => {
     },
     {
       question: "How do I book a cleaning service?",
-      answer: "You can schedule a cleaning service by calling us at 888-581-9885, emailing us at info@cleanupia.com, or using our online booking form on our website."
+      answer: "You can schedule a cleaning service by calling us at 888-581-9885, emailing us at contact@cleanupia.com, or using our online booking form on our website."
     },
     {
       question: "What is your cancellation policy?",

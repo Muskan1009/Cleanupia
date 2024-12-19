@@ -9,13 +9,13 @@ const PageTop = () => {
     const topData = [
         {
             title: 'Phone',
-            details: '888 581 9885',
+            details: '1-888-581-9885',
             icon: MdAccessTimeFilled, // Updated icon
             color: '#F7931E' // Orange
         },
         {
             title: 'Email Address',
-            details: 'info@cleanupia.com',
+            details: 'contact@cleanupia.com',
             icon: AiOutlineMail, // Updated icon
             color: '#3498db' // Blue
         },
