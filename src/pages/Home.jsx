@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { Rating } from "@mui/material";
 import Disclaimer from "../components/Disclaimer";
 import { ContactUrl } from "../services/Helpers";
+import { Helmet } from "react-helmet";
 
 // Sample data for services
 const services = [
@@ -57,8 +58,39 @@ const Home = () => {
     const navigate = useNavigate()
 
     return (
-
+        
         <div className="bg-gray-50">
+            <Helmet>
+        <title>Cleanupia | Your Trusted Cleaning Partner</title>
+        <meta
+          name="description"
+          content="Discover Cleanupia's top-notch cleaning services in Marlton, NJ. We specialize in residential, Airbnb, and deep cleaning to meet all your needs."
+        />
+        <meta
+          name="keywords"
+          content="residential cleaning, Airbnb cleaning, deep cleaning, Marlton NJ cleaning services, professional cleaning company"
+        />
+        <meta property="og:title" content="Cleanupia | Your Trusted Cleaning Partner" />
+        <meta
+          property="og:description"
+          content="Expert cleaning services for residential and Airbnb properties in Marlton, NJ. Book now for a spotless home or office!"
+        />
+        <meta property="og:url" content="https://cleanupia.com/" />
+        <meta
+          property="og:image"
+          content="https://cleanupia.com/assets/cleaning-services.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cleanupia | Your Trusted Cleaning Partner" />
+        <meta
+          name="twitter:description"
+          content="Reliable cleaning services in Marlton, NJ. Cleanupia ensures a clean, healthy environment for your home or office."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cleanupia.com/assets/cleaning-services.jpg"
+        />
+      </Helmet>
             {/* Hero Section */}
             <section className="bg-yellow-50 px-5 md:px-10 lg:px-24 pt-24 pb-24 md:pb-0 mx-auto flex flex-col lg:flex-row justify-between overflow-hidden">
 
